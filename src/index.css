@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #f0f0f0;
+  background: #0a0a0a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #0a0a0a; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+
+.font-display { font-family: 'DM Serif Display', Georgia, serif; }
+
+.hero-grid {
+  background-color: #0a0a0a;
+  background-image: linear-gradient(rgba(212, 168, 83, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 168, 83, 0.025) 1px, transparent 1px), radial-gradient(circle at 50% 38%, rgba(212, 168, 83, 0.08), transparent 36%);
+  background-size: 72px 72px, 72px 72px, auto;
+}
+.hero-grid::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.17; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E"); mix-blend-mode: soft-light; }
+.hero-orb { background: radial-gradient(circle, rgba(212, 168, 83, 0.09), rgba(10, 10, 10, 0) 68%); filter: blur(12px); }
+
+.button-glow { box-shadow: 0 0 0 1px rgba(212, 168, 83, 0.18), 0 10px 30px rgba(212, 168, 83, 0.12); }
+.button-glow:hover { box-shadow: 0 0 0 1px rgba(212, 168, 83, 0.32), 0 14px 38px rgba(212, 168, 83, 0.2); }
+.fit-card, .process-card, .testimonial-card, .form-card { border-top: 1px solid rgba(255, 255, 255, 0.07); border-right: 1px solid rgba(255, 255, 255, 0.04); border-bottom: 1px solid rgba(255, 255, 255, 0.04); transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease; }
+.fit-card:hover, .process-card:hover, .testimonial-card:hover { border-color: rgba(212, 168, 83, 0.32); box-shadow: inset 0 0 35px rgba(212, 168, 83, 0.035); transform: translateY(-2px); }
+.form-card { background: linear-gradient(145deg, rgba(25, 24, 22, 0.98), rgba(16, 16, 16, 0.98)); box-shadow: 0 20px 80px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.04); }
+.form-input { width: 100%; border: 1px solid #30302d; background: #0e0e0d; border-radius: 3px; color: #f0f0f0; padding: 13px 15px; outline: none; transition: border-color 180ms ease, box-shadow 180ms ease; }
+.form-input:focus { border-color: #d4a853; box-shadow: 0 0 0 3px rgba(212, 168, 83, 0.1); }
+select option { background: #151514; color: #f0f0f0; }
+.final-cta { background: radial-gradient(circle at 50% 80%, rgba(212, 168, 83, 0.12), transparent 48%), #11110f; }
+.industry-mark { position: relative; }
+.industry-mark::after { content: 'Industry Partner'; }
+.shape-1, .shape-2, .shape-3, .shape-4, .shape-5, .shape-6 { display: block; height: 18px; width: 18px; border: 1px solid #5c5850; opacity: .8; }
+.shape-1 { border-radius: 50%; }
+.shape-2 { transform: rotate(45deg); }
+.shape-3 { border-radius: 4px; }
+.shape-4 { border-radius: 50% 0; transform: rotate(45deg); }
+.shape-5 { border-width: 2px; transform: rotate(30deg); }
+.shape-6 { border-radius: 50%; border-style: dashed; }
+.industry-mark::after { position: absolute; bottom: 7px; display: none; font-size: 7px; }
+
+@media (max-width: 640px) {
+  .hero-grid { background-size: 48px 48px, 48px 48px, auto; }
+}
