@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jpapaioannou03.github.io/B2B-AI-Automation-Lead-Gen-Landing--Page/sitemap.xml
